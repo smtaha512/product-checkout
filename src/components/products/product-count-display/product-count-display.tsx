@@ -5,5 +5,5 @@ export interface ProductCountDisplayProps {
 }
 
 export function ProductCountDisplay(props: ProductCountDisplayProps) {
-  return <p className="product-count">{props.count}</p>;
+  return <p className="product-count m-0">{props.count}</p>;
 }

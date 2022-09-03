@@ -31,6 +31,17 @@ $colors: (
   &-center {
     justify-content: center;
   }
+  &-between {
+    justify-content: space-between;
+  }
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 .App {
