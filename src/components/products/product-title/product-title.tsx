@@ -2,7 +2,7 @@ import clsx from "clsx";
 import "./styles.scss";
 export interface ProductTitleProps {
   title: string;
-  className: string;
+  className?: string;
 }
 
 export function ProductTitle(props: ProductTitleProps) {
