@@ -24,7 +24,7 @@ export function ProductImage(props: Partial<ProductImageProps>) {
 
   return (
     <div
-      className={clsx("border border-rounded border-purple", props.className, {
+      className={clsx("border border-rounded border-very-light-blue", props.className, {
         "bg-white": !props.imageURL,
       })}
       style={{ height: dimension, width: dimension }}

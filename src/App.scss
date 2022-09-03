@@ -1,6 +1,36 @@
+$colors: (
+  "bright-gray": #e8e8eb,
+  "dark-gray": #626262,
+  "very-light-blue": #6a52ff,
+);
+
 :root {
-  --color-purple: #6A52FF;
-  --color-dark-gray: #626262;
+  @each $color-name, $color-code in $colors {
+    --color-#{$color-name}: #{$color-code};
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items {
+  &-center {
+    align-items: center;
+  }
+  &-start {
+    align-items: flex-start;
+  }
+}
+
+.justify-content {
+  &-center {
+    justify-content: center;
+  }
 }
 
 .App {
