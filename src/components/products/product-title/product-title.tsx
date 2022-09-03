@@ -4,7 +4,7 @@ export interface ProductTitleProps {
 }
 
 export function ProductTitle(props: ProductTitleProps) {
-  return <p className="text-dark-gray">
+  return <p className="product-title text-dark-gray">
     {props.title}
   </p>
 }

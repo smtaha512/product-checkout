@@ -1,3 +1,8 @@
+:root {
+  --color-purple: #6A52FF;
+  --color-dark-gray: #626262;
+}
+
 .App {
   text-align: center;
 }
