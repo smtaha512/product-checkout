@@ -1,0 +1,15 @@
+.border {
+  border: 4px solid;
+
+  &-purple {
+    border-color: #6a52ff;
+  }
+
+  &-rounded {
+    border-radius: 199px;
+  }
+}
+
+.bg-white {
+  background-color: white;
+}
