@@ -11,7 +11,7 @@
     color: var(--color-bright-gray);
   }
 
-  &:hover:not(.btn-disabled){
-    cursor: pointer;
+  &:hover.btn-disabled{
+    cursor: not-allowed;
   }
 }

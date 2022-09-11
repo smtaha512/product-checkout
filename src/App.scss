@@ -2,13 +2,18 @@ $colors: (
   "bright-gray": #e8e8eb,
   "dark-gray": #626262,
   "very-light-blue": #6a52ff,
-  "quick-silver": #A7A7A7
+  "quick-silver": #A7A7A7,
+  "pastel-red": #FF6363
 );
 
 :root {
   @each $color-name, $color-code in $colors {
     --color-#{$color-name}: #{$color-code};
   }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .d-flex {
