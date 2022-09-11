@@ -13,7 +13,7 @@ export function ProductWithBottomInfoPosition(props: ProductWithInfoPositionProp
         size={props.imageSize}
       />
         <ProductTitle className= "mb-12" title={props.title} />
-        <ProductPrice currency={props.currency} price={props.price} />
+        <ProductPrice className= "mb-12" currency={props.currency} price={props.price} />
     </div>
   );
 }

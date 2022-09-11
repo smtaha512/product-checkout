@@ -24,13 +24,13 @@ export function ProductImage(props: Partial<ProductImageProps>) {
 
   return (
     <div
-      className={clsx("border border-rounded border-very-light-blue", props.className, {
+      className={clsx("border border-rounded border-very-light-blue product-image-box-shadow", props.className, {
         "bg-white": !props.imageURL,
       })}
       style={{ height: dimension, width: dimension }}
     >
       {props.imageURL && (
-        <img src={props.imageURL} alt={props.alt} {...(props.srcset && { srcset: props.srcset })} />
+        <img className="product-image-box-shadow" src={props.imageURL} alt={props.alt} {...(props.srcset && { srcset: props.srcset })} />
       )}
     </div>
   );
