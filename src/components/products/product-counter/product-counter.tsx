@@ -12,14 +12,16 @@ export function ProductCounter(props: ProductCounterProps) {
   const [count, setCount] = useState(0);
   return (
     <>
-    {props.children}
-      <div className="d-flex flex-column align-items-center">
-        <div className="d-flex justify-content-between w-100">
-          <ProductDecrementerButton disabled={count < 1} onClick={() => setCount(count - 1)} />
-          <ProductCountDisplay count={count} />
-          <ProductIncrementorButton disabled={count > 10} onClick={() => setCount(count + 1)} />
+      <div>
+        {props.children}
+        <div className="d-flex flex-column align-items-center">
+          <div className="d-flex justify-content-space-evenly w-100">
+            <ProductDecrementerButton disabled={count < 1} onClick={() => setCount(count - 1)} />
+            <ProductCountDisplay count={count} />
+            <ProductIncrementorButton disabled={count > 10} onClick={() => setCount(count + 1)} />
+          </div>
+          <p className="product-counter-text m-0">quantity</p>
         </div>
-        <p className="product-counter-text m-0">quantity</p>
       </div>
     </>
   );

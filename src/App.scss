@@ -3,7 +3,8 @@ $colors: (
   "dark-gray": #626262,
   "very-light-blue": #6a52ff,
   "quick-silver": #A7A7A7,
-  "pastel-red": #FF6363
+  "pastel-red": #FF6363,
+  "aurometalsaurus": #697386
 );
 
 :root {
@@ -24,21 +25,23 @@ $colors: (
   flex-direction: column;
 }
 
+$align-items-values: center, flex-start;
+
 .align-items {
-  &-center {
-    align-items: center;
-  }
-  &-start {
-    align-items: flex-start;
+  @each $value in $align-items-values {
+    &-#{$value} {
+      align-items: $value;
+    }
   }
 }
 
+$justify-content-values: center, space-between, space-evenly;
+
 .justify-content {
-  &-center {
-    justify-content: center;
-  }
-  &-between {
-    justify-content: space-between;
+  @each $value in $justify-content-values {
+    &-#{$value} {
+      justify-content: $value;
+    }
   }
 }
 
