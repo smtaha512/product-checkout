@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { CartButton } from "../../cart/cart-button";
 import { Wrapper } from "../../shared/wrapper";
 import { ProductCounter } from "../product-counter/product-counter";
@@ -9,6 +10,12 @@ export interface ProductsProps {}
 
 export function Products(props: ProductsProps) {
   const { data } = useFetchProduct();
+  const navigate = useNavigate();
+
+  function navigateToCheckout() {
+    return navigate('/checkout');
+  }
+
   return (
     <Wrapper
       className="products-page"
@@ -28,7 +35,7 @@ export function Products(props: ProductsProps) {
           ))}
         </div>
       }
-      footerElement={<CartButton itemsCount={1} onClick={() => {}}></CartButton>}
+      footerElement={<CartButton itemsCount={1} onClick={navigateToCheckout}></CartButton>}
     />
   );
 }

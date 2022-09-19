@@ -20,7 +20,7 @@ export function ProductCounter(props: ProductCounterProps) {
             <ProductCountDisplay count={count} />
             <ProductIncrementorButton disabled={count > 10} onClick={() => setCount(count + 1)} />
           </div>
-          <p className="product-counter-text m-0">quantity</p>
+          <p className="product-counter-text m-0 font-weight-400 font-12px">quantity</p>
         </div>
       </div>
     </>

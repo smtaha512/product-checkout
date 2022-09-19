@@ -2,9 +2,9 @@ $colors: (
   "bright-gray": #e8e8eb,
   "dark-gray": #626262,
   "very-light-blue": #6a52ff,
-  "quick-silver": #A7A7A7,
-  "pastel-red": #FF6363,
-  "aurometalsaurus": #697386
+  "quick-silver": #a7a7a7,
+  "pastel-red": #ff6363,
+  "aurometalsaurus": #697386,
 );
 
 :root {
@@ -41,6 +41,49 @@ $justify-content-values: center, space-between, space-evenly;
   @each $value in $justify-content-values {
     &-#{$value} {
       justify-content: $value;
+    }
+  }
+}
+
+$text-align-values: start, end;
+
+.text-align {
+  @each $value in $text-align-values {
+    &-#{$value} {
+      text-align: $value;
+    }
+  }
+}
+
+$font-weight-values: 400, 500, 700;
+
+.font-weight {
+  @each $value in $font-weight-values {
+    &-#{$value} {
+      font-weight: $value;
+    }
+  }
+}
+
+.text {
+  @each $color-name, $_ in $colors {
+    &-#{$color-name} {
+      color: var(--color-#{$color-name});
+    }
+  }
+}
+
+$font-sizes-px: 10, 11, 12, 14, 16;
+$font-size-values: (
+  "px": $font-sizes-px,
+);
+
+.font {
+  @each $unit, $sizes in $font-size-values {
+    @each $size in $sizes {
+      &-#{$size}-#{$unit} {
+        font-size: #{$size}#{$unit};
+      }
     }
   }
 }

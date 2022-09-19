@@ -6,7 +6,7 @@ export interface ProductTitleProps {
 }
 
 export function ProductTitle(props: ProductTitleProps) {
-  return <p className={clsx("product-title text-dark-gray", props.className)}>
+  return <p className={clsx("product-title text-dark-gray font-weight-700 font-14px", props.className)}>
     {props.title}
   </p>
 }

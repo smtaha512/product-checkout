@@ -3,7 +3,7 @@ import "./styles.scss";
 
 export interface CartButtonProps {
   itemsCount?: number;
-  onClick: () => void;
+  onClick: React.MouseEventHandler<HTMLButtonElement | HTMLParagraphElement> | undefined;
 }
 
 export function CartButton(props: CartButtonProps) {
@@ -11,12 +11,12 @@ export function CartButton(props: CartButtonProps) {
     <div className="cart-button-wrapper d-flex flex-column justify-content-center align-items-center">
       <button
         className="cart-button d-flex justify-content-center align-items-center cursor-pointer"
-        onClick={props.onClick}
+        onClick={props?.onClick}
       >
         <CartIcon />
-        {(props?.itemsCount ?? 0) > 0 && <div className="products-count">{props.itemsCount}</div>}
+        {(props?.itemsCount ?? 0) > 0 && <div className="products-count font-10px">{props.itemsCount}</div>}
       </button>
-      <p onClick={props.onClick}>Checkout</p>
+      <p className="font-weight-500 font-12px" onClick={props?.onClick}>Checkout</p>
     </div>
   );
 }
