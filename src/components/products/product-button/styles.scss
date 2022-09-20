@@ -2,14 +2,9 @@
   background: #ffffff;
   border: 1px solid var(--color-bright-gray);
   border-radius: 3px;
-  color: var(--color-very-light-blue);
   height: 16px;
   width: 16px;
   text-align: center;
-
-  &.btn-disabled {
-    color: var(--color-bright-gray);
-  }
 
   &:hover.btn-disabled{
     cursor: not-allowed;

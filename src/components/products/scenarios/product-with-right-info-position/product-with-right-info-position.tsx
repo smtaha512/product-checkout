@@ -15,7 +15,7 @@ export function ProductWithRightInfoPosition(props: ProductWithInfoPositionProps
       </div>
       <div className="d-flex flex-column align-items-end justify-content-center">
       <p className="m-0 text-align-end font-weight-700 font-16px text-very-light-blue">40 THB</p>
-      <p className="m-0 text-align-end font-weight-400 font-12px">qty: 2</p>
+      <p className="m-0 text-align-end font-weight-400 font-12px text-quick-silver">qty: 2</p>
       </div>
     </div>
   );

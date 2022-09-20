@@ -13,8 +13,8 @@ export function ProductButton(props: ProductButtonProps) {
       type="button"
       disabled={props.disabled}
       className={clsx(
-        "product-button d-flex justify-content-center align-items-center cursor-pointer",
-        { "btn-disabled": props.disabled }
+        "product-button d-flex justify-content-center align-items-center cursor-pointer text-bright-gray",
+        { "btn-disabled bright-gray": props.disabled }
       )}
       onClick={props.onClick}
     >
